@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		546D2D9028E4370000F830FE /* DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546D2D8F28E4370000F830FE /* DemoApp.swift */; };
-		546D2D9228E4370000F830FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546D2D9128E4370000F830FE /* ContentView.swift */; };
+		546D2D9228E4370000F830FE /* HelpListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546D2D9128E4370000F830FE /* HelpListView.swift */; };
 		546D2D9428E4370100F830FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 546D2D9328E4370100F830FE /* Assets.xcassets */; };
 		546D2DA128E4383D00F830FE /* AppHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546D2DA028E4383D00F830FE /* AppHelp.swift */; };
 		546D2DA428E4385000F830FE /* SwiftHelp in Frameworks */ = {isa = PBXBuildFile; productRef = 546D2DA328E4385000F830FE /* SwiftHelp */; };
 		546D2DA728E4387700F830FE /* SwiftHelp in Frameworks */ = {isa = PBXBuildFile; productRef = 546D2DA628E4387700F830FE /* SwiftHelp */; };
 		546D2DAA28E46EDA00F830FE /* Lorem in Frameworks */ = {isa = PBXBuildFile; productRef = 546D2DA928E46EDA00F830FE /* Lorem */; };
+		546D2DAC28E48EEE00F830FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546D2DAB28E48EEE00F830FE /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		546D2D8C28E4370000F830FE /* SwiftHelpDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftHelpDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		546D2D8F28E4370000F830FE /* DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoApp.swift; sourceTree = "<group>"; };
-		546D2D9128E4370000F830FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		546D2D9128E4370000F830FE /* HelpListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpListView.swift; sourceTree = "<group>"; };
 		546D2D9328E4370100F830FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		546D2D9528E4370100F830FE /* SwiftHelpDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftHelpDemo.entitlements; sourceTree = "<group>"; };
 		546D2D9E28E4371F00F830FE /* SwiftHelp */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SwiftHelp; path = ../SwiftHelp; sourceTree = "<group>"; };
 		546D2DA028E4383D00F830FE /* AppHelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHelp.swift; sourceTree = "<group>"; };
+		546D2DAB28E48EEE00F830FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +74,8 @@
 			isa = PBXGroup;
 			children = (
 				546D2D8F28E4370000F830FE /* DemoApp.swift */,
-				546D2D9128E4370000F830FE /* ContentView.swift */,
+				546D2DAB28E48EEE00F830FE /* ContentView.swift */,
+				546D2D9128E4370000F830FE /* HelpListView.swift */,
 				546D2DA028E4383D00F830FE /* AppHelp.swift */,
 			);
 			path = Views;
@@ -163,8 +166,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				546D2D9228E4370000F830FE /* ContentView.swift in Sources */,
+				546D2D9228E4370000F830FE /* HelpListView.swift in Sources */,
 				546D2DA128E4383D00F830FE /* AppHelp.swift in Sources */,
+				546D2DAC28E48EEE00F830FE /* ContentView.swift in Sources */,
 				546D2D9028E4370000F830FE /* DemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
