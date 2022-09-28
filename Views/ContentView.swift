@@ -7,39 +7,22 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            ScrollView {
-                VStack(spacing: 20) {
-                    NavigationLink("Whats New") {
-                        HelpContent().whatsNew.body
-                    }
-                    .help(\.whatsNew)
-                    .helpElementStyle(.questionmark(alignment: .bottomLeading))
-
-                    NavigationLink(help: \.communication)
-                        .help(\.communication)
-                        .helpElementStyle(.questionmark)
-
-                    VStack {
-                        Image(systemName: "globe")
-                            .imageScale(.large)
-                            .foregroundColor(.accentColor)
-
-                        Text("Hello, world!")
-                    }
-                    .help(\.whatsNew)
+            List {
+//                NavigationLink(help: \.deviceList) {
+//                    Label(, systemImage: "list.bullet").chevron()
+//                }
+                NavigationLink {
+                    HelpContent[\.deviceList].body
+                        .navigationTitle(HelpContent[\.deviceList].title)
+                } label: {
+                    Text(HelpContent[\.deviceList].title)
                 }
-                .frame(maxWidth: .infinity)
-                .padding()
+
+                NavigationLink(help: \.eventFeed)
             }
             .navigationTitle("Content")
         }
-        #if os(iOS)
         .navigationViewStyle(.stack)
-        #endif
-        .help(isVisible: showHelp)
-        .backport.overlay(alignment: .bottom) {
-            Toggle("Help Enabled", isOn: $showHelp.animation(.interactiveSpring()))
-                .padding()
-        }
+        .helpPresentationStyle(.plain)
     }
 }

@@ -1,28 +1,34 @@
 import SwiftUI
+import SwiftUIBackports
 import SwiftHelp
 
 extension HelpContent {
-    var whatsNew: some Help {
-        AppHelp(id: "whats-new", title: "Whats new") {
-            Text("Various new features")
+    var deviceList: AppHelp {
+        AppHelp("Device List", systemImage: "list.bullet") {
+            Text("Device list")
         }
     }
 
-    var communication: some Help {
-        AppHelp(id: "communication", title: "Communication") {
-            Text("Some communication benefits")
+    var eventFeed: AppHelp {
+        AppHelp("Event Feed", systemImage: "list.bullet.below.rectangle") {
+            Text("Event feed")
         }
     }
 }
 
-struct AppHelp<Content: View>: Help {
-    var id: String
+struct AppHelp: Help {
+    var id: String { title }
+    var systemImage: String
     var title: String
-    var body: Content
+    var content: () -> AnyView
 
-    init(id: String, title: String, @ViewBuilder content: () -> Content) {
-        self.id = id
-        self.title = title
-        self.body = content()
+    init<S: StringProtocol, Content: View>(_ title: S, systemImage: String, @ViewBuilder content: @escaping () -> Content) {
+        self.title = "\(title)"
+        self.systemImage = systemImage
+        self.content = { .init(content()) }
+    }
+
+    var body: some View {
+        content()
     }
 }
