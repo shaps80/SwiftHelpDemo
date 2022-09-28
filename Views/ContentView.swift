@@ -9,13 +9,15 @@ struct ContentView: View {
         NavigationView {
             ScrollView {
                 VStack(spacing: 20) {
-                    NavigationLink("Communication Charts") {
+                    NavigationLink("Whats New") {
                         HelpContent().whatsNew.body
                     }
-                    .help(\.communication)
-                    .helpElementStyle(.questionmark)
+                    .help(\.whatsNew)
+                    .helpElementStyle(.questionmark(alignment: .bottomLeading))
 
-                    NavigationLink(help: \.whatsNew)
+                    NavigationLink(help: \.communication)
+                        .help(\.communication)
+                        .helpElementStyle(.questionmark)
 
                     VStack {
                         Image(systemName: "globe")
@@ -39,6 +41,5 @@ struct ContentView: View {
             Toggle("Help Enabled", isOn: $showHelp.animation(.interactiveSpring()))
                 .padding()
         }
-        .onDisappear { showHelp = false }
     }
 }

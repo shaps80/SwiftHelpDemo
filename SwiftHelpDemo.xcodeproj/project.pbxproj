@@ -13,6 +13,7 @@
 		546D2DA128E4383D00F830FE /* AppHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546D2DA028E4383D00F830FE /* AppHelp.swift */; };
 		546D2DA428E4385000F830FE /* SwiftHelp in Frameworks */ = {isa = PBXBuildFile; productRef = 546D2DA328E4385000F830FE /* SwiftHelp */; };
 		546D2DA728E4387700F830FE /* SwiftHelp in Frameworks */ = {isa = PBXBuildFile; productRef = 546D2DA628E4387700F830FE /* SwiftHelp */; };
+		546D2DAA28E46EDA00F830FE /* Lorem in Frameworks */ = {isa = PBXBuildFile; productRef = 546D2DA928E46EDA00F830FE /* Lorem */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				546D2DAA28E46EDA00F830FE /* Lorem in Frameworks */,
 				546D2DA428E4385000F830FE /* SwiftHelp in Frameworks */,
 				546D2DA728E4387700F830FE /* SwiftHelp in Frameworks */,
 			);
@@ -102,6 +104,7 @@
 			packageProductDependencies = (
 				546D2DA328E4385000F830FE /* SwiftHelp */,
 				546D2DA628E4387700F830FE /* SwiftHelp */,
+				546D2DA928E46EDA00F830FE /* Lorem */,
 			);
 			productName = SwiftHelpDemo;
 			productReference = 546D2D8C28E4370000F830FE /* SwiftHelpDemo.app */;
@@ -133,6 +136,7 @@
 			mainGroup = 546D2D8328E4370000F830FE;
 			packageReferences = (
 				546D2DA528E4387700F830FE /* XCRemoteSwiftPackageReference "SwiftHelp" */,
+				546D2DA828E46EDA00F830FE /* XCRemoteSwiftPackageReference "Lorem" */,
 			);
 			productRefGroup = 546D2D8D28E4370000F830FE /* Products */;
 			projectDirPath = "";
@@ -308,7 +312,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.benkau.SwiftHelpDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -346,7 +352,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.benkau.SwiftHelpDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -385,6 +393,14 @@
 				kind = branch;
 			};
 		};
+		546D2DA828E46EDA00F830FE /* XCRemoteSwiftPackageReference "Lorem" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/thirdfort/Lorem";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -396,6 +412,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 546D2DA528E4387700F830FE /* XCRemoteSwiftPackageReference "SwiftHelp" */;
 			productName = SwiftHelp;
+		};
+		546D2DA928E46EDA00F830FE /* Lorem */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 546D2DA828E46EDA00F830FE /* XCRemoteSwiftPackageReference "Lorem" */;
+			productName = Lorem;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

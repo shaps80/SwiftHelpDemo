@@ -15,7 +15,6 @@ extension HelpContent {
     }
 }
 
-
 struct AppHelp<Content: View>: Help {
     var id: String
     var title: String
