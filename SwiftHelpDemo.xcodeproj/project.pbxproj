@@ -7,20 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		546D2D9028E4370000F830FE /* SwiftHelpDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546D2D8F28E4370000F830FE /* SwiftHelpDemoApp.swift */; };
+		546D2D9028E4370000F830FE /* DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546D2D8F28E4370000F830FE /* DemoApp.swift */; };
 		546D2D9228E4370000F830FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546D2D9128E4370000F830FE /* ContentView.swift */; };
 		546D2D9428E4370100F830FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 546D2D9328E4370100F830FE /* Assets.xcassets */; };
-		546D2D9828E4370100F830FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 546D2D9728E4370100F830FE /* Preview Assets.xcassets */; };
+		546D2DA128E4383D00F830FE /* AppHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546D2DA028E4383D00F830FE /* AppHelp.swift */; };
+		546D2DA428E4385000F830FE /* SwiftHelp in Frameworks */ = {isa = PBXBuildFile; productRef = 546D2DA328E4385000F830FE /* SwiftHelp */; };
+		546D2DA728E4387700F830FE /* SwiftHelp in Frameworks */ = {isa = PBXBuildFile; productRef = 546D2DA628E4387700F830FE /* SwiftHelp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		546D2D8C28E4370000F830FE /* SwiftHelpDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftHelpDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		546D2D8F28E4370000F830FE /* SwiftHelpDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftHelpDemoApp.swift; sourceTree = "<group>"; };
+		546D2D8F28E4370000F830FE /* DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoApp.swift; sourceTree = "<group>"; };
 		546D2D9128E4370000F830FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		546D2D9328E4370100F830FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		546D2D9528E4370100F830FE /* SwiftHelpDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftHelpDemo.entitlements; sourceTree = "<group>"; };
-		546D2D9728E4370100F830FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		546D2D9E28E4371F00F830FE /* SwiftHelp */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SwiftHelp; path = ../SwiftHelp; sourceTree = "<group>"; };
+		546D2DA028E4383D00F830FE /* AppHelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHelp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +30,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				546D2DA428E4385000F830FE /* SwiftHelp in Frameworks */,
+				546D2DA728E4387700F830FE /* SwiftHelp in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +42,10 @@
 			isa = PBXGroup;
 			children = (
 				546D2D9E28E4371F00F830FE /* SwiftHelp */,
-				546D2D8E28E4370000F830FE /* SwiftHelpDemo */,
+				546D2D9F28E4382300F830FE /* Views */,
+				546D2D8E28E4370000F830FE /* Resources */,
 				546D2D8D28E4370000F830FE /* Products */,
+				546D2DA228E4385000F830FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,24 +57,30 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		546D2D8E28E4370000F830FE /* SwiftHelpDemo */ = {
+		546D2D8E28E4370000F830FE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				546D2D8F28E4370000F830FE /* SwiftHelpDemoApp.swift */,
-				546D2D9128E4370000F830FE /* ContentView.swift */,
 				546D2D9328E4370100F830FE /* Assets.xcassets */,
 				546D2D9528E4370100F830FE /* SwiftHelpDemo.entitlements */,
-				546D2D9628E4370100F830FE /* Preview Content */,
 			);
-			path = SwiftHelpDemo;
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		546D2D9628E4370100F830FE /* Preview Content */ = {
+		546D2D9F28E4382300F830FE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				546D2D9728E4370100F830FE /* Preview Assets.xcassets */,
+				546D2D8F28E4370000F830FE /* DemoApp.swift */,
+				546D2D9128E4370000F830FE /* ContentView.swift */,
+				546D2DA028E4383D00F830FE /* AppHelp.swift */,
 			);
-			path = "Preview Content";
+			path = Views;
+			sourceTree = "<group>";
+		};
+		546D2DA228E4385000F830FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +99,10 @@
 			dependencies = (
 			);
 			name = SwiftHelpDemo;
+			packageProductDependencies = (
+				546D2DA328E4385000F830FE /* SwiftHelp */,
+				546D2DA628E4387700F830FE /* SwiftHelp */,
+			);
 			productName = SwiftHelpDemo;
 			productReference = 546D2D8C28E4370000F830FE /* SwiftHelpDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -115,6 +131,9 @@
 				Base,
 			);
 			mainGroup = 546D2D8328E4370000F830FE;
+			packageReferences = (
+				546D2DA528E4387700F830FE /* XCRemoteSwiftPackageReference "SwiftHelp" */,
+			);
 			productRefGroup = 546D2D8D28E4370000F830FE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,7 +148,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				546D2D9828E4370100F830FE /* Preview Assets.xcassets in Resources */,
 				546D2D9428E4370100F830FE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,7 +160,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				546D2D9228E4370000F830FE /* ContentView.swift in Sources */,
-				546D2D9028E4370000F830FE /* SwiftHelpDemoApp.swift in Sources */,
+				546D2DA128E4383D00F830FE /* AppHelp.swift in Sources */,
+				546D2D9028E4370000F830FE /* DemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,14 +282,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = SwiftHelpDemo/SwiftHelpDemo.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Resources/SwiftHelpDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftHelpDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = V2CWYL9AN8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Help;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -281,11 +300,11 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.benkau.SwiftHelpDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -301,14 +320,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = SwiftHelpDemo/SwiftHelpDemo.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Resources/SwiftHelpDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftHelpDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = V2CWYL9AN8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Help;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -319,11 +338,11 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.benkau.SwiftHelpDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -356,6 +375,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		546D2DA528E4387700F830FE /* XCRemoteSwiftPackageReference "SwiftHelp" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/shaps80/SwiftHelp";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		546D2DA328E4385000F830FE /* SwiftHelp */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftHelp;
+		};
+		546D2DA628E4387700F830FE /* SwiftHelp */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 546D2DA528E4387700F830FE /* XCRemoteSwiftPackageReference "SwiftHelp" */;
+			productName = SwiftHelp;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 546D2D8428E4370000F830FE /* Project object */;
 }
