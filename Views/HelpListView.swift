@@ -38,6 +38,7 @@ struct HelpListView: View {
 }
 
 struct HelpView: View {
+    @Environment(\.dismissHelp) private var dismiss
     let help: AppHelp
 
     init(_ keyPath: KeyPath<HelpContent, AppHelp>) {

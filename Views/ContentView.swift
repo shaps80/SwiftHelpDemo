@@ -8,14 +8,29 @@ struct ContentView: View {
         NavigationView {
             ScrollView {
                 VStack {
-                    NavigationLink {
-                        Text("Random destination")
-                    } label: {
-                        Text("I wonder what this is?")
+                    HStack {
+                        VStack(alignment: .leading, spacing: 5) {
+                            Text("Headline")
+                                .foregroundColor(.primary)
+                                .font(.headline)
+
+                            Text("I wonder what this is?")
+                                .foregroundColor(.secondary)
+                                .font(.footnote)
+                        }
+
+                        Spacer(minLength: 0)
+
+                        Image(systemName: "chevron.right")
+                            .foregroundColor(.secondary)
+                            .font(.footnote)
                     }
+                    .background(Color.primary.opacity(0.0001))
                     .help(\.filterFeed)
+                    .helpElementStyle(.questionmark(alignment: .trailing))
                 }
                 .frame(maxWidth: .infinity)
+                .padding()
             }
             .navigationTitle("Demo")
             .toolbar {
@@ -25,10 +40,10 @@ struct ContentView: View {
                     }
                 } label: {
                     Label("Help", systemImage: "questionmark.circle")
+                        .accentColor(.yellow)
                 }
             }
-            .help(isVisible: showHelp)
-            .helpElementStyle(.questionmark)
+            .help(isVisible: $showHelp)
         }
         .navigationViewStyle(.stack)
     }

@@ -6,71 +6,79 @@ extension HelpContent {
     // Get started
     var deviceList: AppHelp {
         AppHelp("Device List", systemImage: "list.bullet") {
-            Text("Devices")
+            HelpDetailView(title: "Devices")
         }
     }
 
     var eventFeed: AppHelp {
         AppHelp("Event Feed", systemImage: "list.bullet.below.rectangle") {
-            Text("Feed")
+            HelpDetailView(title: "Feed")
         }
     }
 
     var profile: AppHelp {
         AppHelp("My Profile", systemImage: "person") {
-            Text("Profile")
+            HelpDetailView(title: "Profile")
         }
     }
 
     // Feed
     var filterFeed: AppHelp {
         AppHelp("Filter your Feed", systemImage: "line.3.horizontal.decrease.circle") {
-            Text("Filter")
+            HelpDetailView(title: "Filter")
         }
     }
 
     var notifications: AppHelp {
         AppHelp("Push notifications", systemImage: "platter.filled.top.iphone") {
-            Text("Notifications")
+            HelpDetailView(title: "Notifications")
         }
     }
 
     // Report
     var communication: AppHelp {
         AppHelp("Communication", systemImage: "point.3.connected.trianglepath.dotted") {
-            Text("Communication")
+            HelpDetailView(title: "Communication")
         }
     }
 
     var traffic: AppHelp {
         AppHelp("Traffic", systemImage: "chart.xyaxis.line") {
-            Text("Traffic")
+            HelpDetailView(title: "Traffic")
         }
     }
 
     var destinations: AppHelp {
         AppHelp("Destinations", systemImage: "pin") {
-            Text("Destinations")
+            HelpDetailView(title: "Destinations")
         }
     }
 
     var performance: AppHelp {
         AppHelp("Performance", systemImage: "gauge") {
-            Text("Performance")
+            HelpDetailView(title: "Performance")
         }
     }
 
     // Widgets
     var overviewWidget: AppHelp {
         AppHelp("Monthly overview", systemImage: "calendar") {
-            Text("Overview widget")
+            HelpDetailView(title: "Overview widget")
         }
     }
 
     var performanceWidgets: AppHelp {
         AppHelp("Performance insights", systemImage: "gauge") {
-            Text("Performance widgets")
+            HelpDetailView(title: "Performance widgets")
         }
+    }
+}
+
+struct HelpDetailView: View {
+    let title: String
+
+    var body: some View {
+        Text(title)
     }
 }
 
